@@ -25,7 +25,6 @@ const char *locations[] = {
   "Rahatani Phata",
   "Pimple Saudagar",
   "Pune Vidyapeeth",
-  "Shivajinagar",
   "C.O.E.P.Hostel ",
   "Manapa Bhavan"
 };
