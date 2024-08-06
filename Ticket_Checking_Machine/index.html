@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conductor Billing Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="billing-machine">
+        <div class="screen" id="screen">Welcome Press the turn on button</div>
+        <div class="buttons">
+            <button class="button" onclick="toggleMachine()" data-action="ONOFF">On/Off</button>
+            <button class="button" onclick="openMenu()" data-action="MENU">Menu</button>
+            <button class="button" onclick="enter()" data-action="ENTER">Enter</button>
+            <button class="button" onclick="resetData()" data-action="RESET">Exit</button>
+            <button class="button" onclick="selectMenuOption('MENU1')" data-action="MENU1">1</button>
+            <button class="button" onclick="selectMenuOption('MENU2')" data-action="MENU2">2</button>
+            <button class="button" onclick="selectMenuOption('MENU3')" data-action="MENU3">3</button>
+            <button class="button" onclick="selectMenuOption('MENU4')" data-action="MENU4">4</button>
+        </div>
+        <div class="rfid-scanner">
+            <div class="rfid-rectangle"></div>
+            <div class="rfid-card" id="dummyCard"></div>
+        </div>
+    <div id="passengerDisplay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
