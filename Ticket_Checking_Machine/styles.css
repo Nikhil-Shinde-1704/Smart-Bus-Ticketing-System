@@ -1,0 +1,394 @@
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.billing-machine {
+  background-color: #1e1e1e; /* Black metal-like color */
+  padding: 20px; /* Increase the padding on all sides */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 350px; /* Set the desired width */
+}
+
+.screen {
+  background-color: #f9f871; /* Yellowish screen background */
+  color: #000000; /* Black text color */
+  padding: 20px;
+  border: 5px solid #555555; /* Grey border */
+  border-radius: 15px;
+  margin-bottom: 20px; /* Adjusted margin-bottom value */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  height: 150px; /* Set a fixed height for the screen */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.button[data-direction="UP"] {
+  background-color: #000; /* Black color for arrow buttons */
+  font-size: 18px; /* Adjust font size for better visibility */
+  width: 75px; /* Set a fixed width for consistency */
+  height: 45px; /* Set a fixed height for consistency */
+  margin: 5px; /* Add margin for spacing between buttons */
+  position: relative;
+  top: -68px;
+  left: -103px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.button[data-direction="DOWN"] {
+  background-color: #000; /* Black color for arrow buttons */
+  font-size: 18px; /* Adjust font size for better visibility */
+  width: 75px; /* Set a fixed width for consistency */
+  height: 45px; /* Set a fixed height for consistency */
+  margin: 5px; /* Add margin for spacing between buttons */
+  position: relative;
+  top: -60px;
+  left: 118%;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.button[data-direction="RIGHT"] {
+  background-color: #000; /* Black color for arrow buttons */
+  font-size: 18px; /* Adjust font size for better visibility */
+  width: 75px; /* Set a fixed width for consistency */
+  height: 45px; /* Set a fixed height for consistency */
+  margin: 5px; /* Add margin for spacing between buttons */
+  position: relative;
+  top: -61px;
+  left: 13%;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.button[data-direction="LEFT"] {
+  background-color: #000; /* Black color for arrow buttons */
+  font-size: 18px; /* Adjust font size for better visibility */
+  width: 75px; /* Set a fixed width for consistency */
+  height: 45px; /* Set a fixed height for consistency */
+  margin: 5px; /* Add margin for spacing between buttons */
+  position: relative;
+  top: -61px;
+  left: -115%;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.button[data-action="ONOFF"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: -2px; /* Adjust the distance from the top */
+  left: 238%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="MENU"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: 3px; /* Adjust the distance from the top */
+  left: -115%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="ENTER"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: -1px; /* Adjust the distance from the top */
+  left: -97%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="RESET"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: -8px; /* Adjust the distance from the top */
+  left: -6%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="MENU1"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: -9px; /* Adjust the distance from the top */
+  left: 11%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="MENU2"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: 45px; /* Adjust the distance from the top */
+  left: 17%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="MENU3"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: -17px; /* Adjust the distance from the top */
+  left: 120%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+.button[data-action="MENU4"] {
+  background-color: #000; /* Black button color */
+  color: #ffffff;
+  padding: 12px; /* Slightly smaller padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Slightly smaller font size */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  top: -16px; /* Adjust the distance from the top */
+  left: -114%; /* Adjust the distance from the left */
+  width: 75px; /* Set the desired width */
+  height: 45px;
+}
+
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.rfid-scanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative; /* Make the container relative for absolute positioning */
+}
+
+.rfid-card {
+  width: 150px;
+  height: 230px;
+  background-color: #2196F3; /* Blue background color */
+  border-radius: 8px; /* Slight border-radius for a subtle rounded corner effect */
+  position: absolute;
+  bottom: -157px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rfid-card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #ffffff; /* White border for the card */
+  border-radius: 6px; /* Slightly rounded corners for the card border */
+}
+
+.rfid-card::after {
+  content: "RFID CARD";
+  position: absolute;
+  top: 50%; /* Adjusted the text position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff; /* White color for the text */
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rfid-card:hover {
+  transform: translateY(-50px);
+}
+
+
+
+
+.rfid-rectangle {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  top: -25px;
+  left: -1%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
+}
+
+.rfid-rectangle::after {
+  content: "RFID SCANNER";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ecf0f1; /* Updated to a more realistic color for the text */
+  font-size: 20px; /* Adjusted font size */
+  text-align: center;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  margin: 5px;
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.button[data-direction="UP"],
+.button[data-direction="DOWN"],
+.button[data-direction="RIGHT"],
+.button[data-direction="LEFT"],
+.button[data-action="ONOFF"],
+.button[data-action="MENU"],
+.button[data-action="ENTER"],
+.button[data-action="RESET"],
+.button[data-action="MENU1"],
+.button[data-action="MENU2"],
+.button[data-action="MENU3"],
+.button[data-action="MENU4"] {
+  font-size: 18px;
+  width: 75px;
+  height: 45px;
+  border-radius: 3px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #333; /* Soft color */
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button[data-direction="UP"]::before {
+  content: '↑';
+}
+
+.button[data-direction="DOWN"]::before {
+  content: '↓';
+}
+
+.button[data-direction="RIGHT"]::before {
+  content: '→';
+}
+
+.button[data-direction="LEFT"]::before {
+  content: '←';
+}
+
+.button:active {
+  transform: translateY(4px); /* Increased depth effect */
+}
+
+.button[data-direction="UP"]:active,
+.button[data-direction="DOWN"]:active,
+.button[data-direction="RIGHT"]:active,
+.button[data-direction="LEFT"]:active,
+.button[data-action="ONOFF"]:active,
+.button[data-action="MENU"]:active,
+.button[data-action="ENTER"]:active,
+.button[data-action="RESET"]:active,
+.button[data-action="MENU1"]:active,
+.button[data-action="MENU2"]:active,
+.button[data-action="MENU3"]:active,
+.button[data-action="MENU4"]:active {
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.7); /* Increased depth effect */
+}
